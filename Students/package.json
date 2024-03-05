@@ -1,0 +1,26 @@
+{
+  "name": "3wa-students",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasmine091/3wa_students.git"
+  },
+  "author": "Yasmine091",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasmine091/3wa_students/issues"
+  },
+  "homepage": "https://github.com/Yasmine091/3wa_students#readme",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
