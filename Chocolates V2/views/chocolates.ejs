@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Catalog</title>
+</head>
+
+<body>
+    <h1>Chocolate List:</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Weight</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(chocolateList && chocolateList.length> 0){ %>
+                <% chocolateList.forEach(chocolate=> { %>
+                    <tr>
+                        <td>
+                            <%= chocolate.name %>
+                        </td>
+                        <td>
+                            <%= chocolate.brand %>
+                        </td>
+                        <td>
+                            <%= chocolate.description %>
+                        </td>
+                        <td>$<%= chocolate.price.toFixed(2) %>
+                        </td>
+                        <td>
+                            <%= chocolate.weight %>g
+                        </td>
+                        <td>
+                            <form action="/api/chocolates/delete/<%= chocolate._id %>" method="post">
+                                <a href="/api/chocolates/edit/<%= chocolate._id %>">Edit</a> |
+                                <input type="hidden" name="_method" value="delete" />
+                                <button type="submit">Delete Chocolate</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="6">No chocolates found.</td>
+                            </tr>
+                            <% } %>
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+
+</html>

@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yasmine091/3wa_students.git"
+    "url": "git+https://github.com/Yasmine091/3WA-Node.git"
   },
   "author": "Yasmine091",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Yasmine091/3wa_students/issues"
+    "url": "https://github.com/Yasmine091/3WA-Node/issues"
   },
-  "homepage": "https://github.com/Yasmine091/3wa_students#readme",
+  "homepage": "https://github.com/Yasmine091/3WA-Node#readme",
   "dependencies": {
     "axios": "^1.6.7",
     "chalk": "^5.3.0",

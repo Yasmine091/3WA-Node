@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate catalog</title>
+</head>
+<body>
+    <h1>Chocolate list:</h1>
+    <% if(chocolateList && chocolateList.length > 0){ %>
+        <% chocolateList.forEach(chocolate => { %>
+            <div>
+                <h2><%= chocolate.name %></h2>
+                <p><strong>Brand:</strong> <%= chocolate.brand %></p>
+                <p><strong>Description:</strong> <%= chocolate.description %></p>
+                <p><strong>Price:</strong> $<%= chocolate.price.toFixed(2) %>€</p>
+                <p><strong>Weight:</strong> <%= chocolate.weight %>g</p>
+            </div>
+        <% }) %>
+    <% } else { %>
+        <p>No chocolates found.</p>
+    <% } %>
+    <a href="/">Back to Home</a>
+</body>
+</html>
